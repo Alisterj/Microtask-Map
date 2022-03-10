@@ -8,7 +8,10 @@ export type StudentType = {
     name: string
     age: number
 }
-
+export type CarsType = {
+    manufacturer: string
+    model: string
+}
 function App() {
     const students = [
         {id: v1(), name: 'Alister', age: 23},
@@ -19,9 +22,14 @@ function App() {
         {id: v1(), name: 'Rita', age: 31},
         {id: v1(), name: 'Sofa', age: 36},
     ]
+    const topCars = [
+        {manufacturer:'BMW', model:'m5cs'},
+        {manufacturer:'Mercedes', model:'e63s'},
+        {manufacturer:'Audi', model:'rs6'}
+    ]
   return (
     <div className="App">
-      <NewComponents students={students}/>
+      <NewComponents students={students} cars={topCars}/>
     </div>
   );
 }

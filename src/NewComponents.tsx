@@ -1,9 +1,11 @@
 import React from 'react';
-import {StudentType} from "./App";
+import {CarsType, StudentType} from "./App";
 import Student from "./Student";
+import TopCars from "./TopCars";
 
 type NewComponentsPropsType = {
     students: Array<StudentType>
+    cars: Array<CarsType>
 }
 
 const NewComponents = (props: NewComponentsPropsType) => {
@@ -14,6 +16,7 @@ const NewComponents = (props: NewComponentsPropsType) => {
             <ul>
                 {studentsNameAndOld}
             </ul>
+            <TopCars cars={props.cars}/>
         </div>
     );
 };
